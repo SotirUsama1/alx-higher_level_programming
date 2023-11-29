@@ -10,5 +10,5 @@ def fizzbuzz():
             temp += "Buzz "
         else:
             temp += "{} ".format(i)
-    temp += "Buzz"
-    print(temp)
+    temp += "Buzz "
+    print(temp, end="")
