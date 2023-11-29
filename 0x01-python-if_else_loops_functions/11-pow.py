@@ -6,6 +6,6 @@ def pow(a, b):
             value *= a
         elif b < 0:
             value /= a
-        elif b == 0
+        elif b == 0:
             return 1
     return value
