@@ -7,4 +7,3 @@ if __name__ == "__main__":
     for i in range(1, argc):
         sum = sum + int(args[i])
     print(sum)
-
