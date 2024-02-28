@@ -6,4 +6,4 @@ def element_at(my_list, idx):
     elif idx >= size:
         return "none"
     else:
-        return my_list.index(idx)
+        return my_list[idx]
