@@ -9,10 +9,3 @@ def best_score(a_dictionary):
             best_s = i[1]
             best_k = i[0]
     return best_k
-
-my_dict = { 'John': 12, 'Alex': 8, 'Bob': 14, 'Mike': 14, 'Moll': 16 }
-best_key = best_score(my_dict)
-print("Best score: {}".format(best_key))
-
-best_key = best_score(None)
-print("Best score: {}".format(best_key))
