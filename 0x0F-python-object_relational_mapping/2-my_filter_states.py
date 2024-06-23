@@ -16,8 +16,11 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     if sys.argv[4]:
-        cur.execute("SELECT * FROM states WHERE name like \""
-                    + sys.argv[4] + "\"")
+        script = """SELECT * FROM states
+                    WHERE name like \"{}\"
+                    ORDER BY id;
+                 """.format(sys.argv[4])
+        cur.execute(script)
 
         rows = cur.fetchall()
         for row in rows:
