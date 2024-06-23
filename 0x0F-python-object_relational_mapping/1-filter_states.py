@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" This code print states begin with letter N """
 import MySQLdb
 import sys
 

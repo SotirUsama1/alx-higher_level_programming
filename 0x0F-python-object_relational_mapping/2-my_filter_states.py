@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" This code search for the instance where state name is the same
+    as argument 3"""
 import MySQLdb
 import sys
 
