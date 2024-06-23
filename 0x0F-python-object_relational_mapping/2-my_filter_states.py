@@ -18,7 +18,7 @@ if __name__ == "__main__":
     if sys.argv[4]:
         script = """SELECT * FROM states
                     WHERE name like \"{}\"
-                    ORDER BY id;
+                    ORDER BY states.id;
                  """.format(sys.argv[4])
         cur.execute(script)
 
