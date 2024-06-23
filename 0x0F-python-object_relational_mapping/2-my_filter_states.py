@@ -16,11 +16,10 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     if sys.argv[4]:
-        script = """SELECT * FROM states
-                    WHERE name like BINARY '{}'
-                    ORDER BY states.id;
-                 """.format(sys.argv[4])
-        cur.execute(script)
+        cur.execute("""SELECT * FROM states
+                       WHERE name like BINARY '{}'
+                       ORDER BY states.id;
+                    """.format(sys.argv[4]))
 
         rows = cur.fetchall()
         for row in rows:
