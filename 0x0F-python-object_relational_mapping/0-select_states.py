@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" This is a script to display all the instances in a table from a
+database """
 
 import MySQLdb
 import sys
