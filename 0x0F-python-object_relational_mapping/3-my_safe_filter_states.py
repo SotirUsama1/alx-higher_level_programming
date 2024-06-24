@@ -16,7 +16,6 @@ if __name__ == "__main__":
 
     if sys.argv[4]:
         arg = sys.argv[4].split("'")[0]
-        print(arg)
         cur.execute("""SELECT * FROM states
                        WHERE name like BINARY '{}'
                        ORDER BY states.id;
