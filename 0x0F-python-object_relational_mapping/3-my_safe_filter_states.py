@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" This code search for the instance where state name is the same
-    as argument 3"""
+""" This code prevent sql injection"""
 import MySQLdb
 import sys
 
@@ -15,12 +14,17 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name like \""
-                + sys.argv[4] + "\"")
+    if sys.argv[4]:
+        arg = sys.argv[4].split("'")[0]
+        print(arg)
+        cur.execute("""SELECT * FROM states
+                       WHERE name like BINARY '{}'
+                       ORDER BY states.id;
+                    """.format(arg))
 
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+        rows = cur.fetchall()
+        for row in rows:
+            print(row)
 
     cur.close()
     db.close()
